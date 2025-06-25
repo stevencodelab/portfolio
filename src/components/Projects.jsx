@@ -5,9 +5,10 @@ import './Projects.css';
 
 const projectData = [
   // Ganti dengan data proyek Anda
-  { title: "Project Alpha", description: "Platform manajemen tugas dengan fitur kolaborasi real-time, dibangun dengan MERN stack.", tags: ["React", "Node.js", "MongoDB"], githubUrl: "#", liveUrl: "#" },
-  { title: "Project Beta", description: "Aplikasi e-commerce modern dengan sistem pembayaran terintegrasi dan panel admin.", tags: ["Next.js", "TypeScript", "PostgreSQL"], githubUrl: "#", liveUrl: "#" },
-  { title: "Project Gamma", description: "API service untuk analisis data cuaca historis menggunakan Python (Flask) dan Docker.", tags: ["Python", "Flask", "Docker"], githubUrl: "#", liveUrl: "#" },
+  { title: "Air Traffic Control System", description: "Platform monitoring cctv secara real-time dengan admin dashboard, dibangun dengan Laravel stack.", tags: ["PHP", "Node.js", "MySQL", "Laravel 12"], githubUrl: "#", liveUrl: "#" },
+  { title: "Sistem Perpustakaan Dengan QR Code", description: "Web App Perpustakaan modern dengan sistem transaksi terintegrasi qr code dan panel admin.", tags: ["PHP", "Node.js", "MySQL","CodeIgniter"], githubUrl: "#", liveUrl: "#" },
+  { title: "Sistem Absensi Dengan QR Code", description: "Web App Absensi Guru dan Murid modern dengan sistem terintegrasi qr code untuk analisis data absensi.", tags: ["PHP", "MySQL", "Laravel"], githubUrl: "#", liveUrl: "#" },
+
 ];
 
 const Projects = () => {
