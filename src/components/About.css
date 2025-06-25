@@ -1,0 +1,50 @@
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap; /* Menambahkan ini agar responsif di layar kecil */
+}
+
+.about-text {
+  flex: 2;
+  min-width: 300px; /* Lebar minimum untuk teks */
+}
+
+.about-text .highlight {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 250px; /* Lebar minimum untuk gambar */
+  position: relative;
+}
+
+/* Mengganti .image-placeholder dengan .about-image img */
+.about-image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1; /* Memastikan gambar berbentuk persegi */
+  object-fit: cover;   /* PENTING: Mencegah gambar terdistorsi */
+  border-radius: 8px;
+  display: block;
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.about-image:hover::before {
+  top: 0;
+  left: 0;
+}
