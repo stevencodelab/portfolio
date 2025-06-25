@@ -11,14 +11,13 @@ import Contact from './components/Contact';
 function App() {
   return (
     <div>
-      <AnimatedHexagonBackground />
       <Navbar />
       <main>
         <Hero />
         <About />
         <Skills />
         <Projects />
-        <Layanan /> 
+        <Layanan/>
         <Contact />
       </main>
     </div>
