@@ -3,12 +3,10 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './Projects.css';
 
-// 1. Impor gambar untuk setiap proyek dari folder assets
 import imageAlpha from '../assets/hero.png';
 import imageBeta from '../assets/home.png';
 import imageGamma from '../assets/cctv.png';
 
-// 2. Tambahkan properti 'image' ke setiap objek proyek
 const projectData = [
   {
     title: "Sistem Absensi Dengan QR Code",
@@ -16,7 +14,7 @@ const projectData = [
     tags: ["PHP", "Node.js", "MySQL", "CodeIgniter"],
     githubUrl: "#",
     liveUrl: "#",
-    image: imageAlpha // <-- Tambahkan ini
+    image: imageAlpha 
   },
   {
     title: "Sistem Perpustakaan Dengan QR Code",
@@ -24,7 +22,7 @@ const projectData = [
     tags: ["PHP", "CodeIgniter", "MySQL"],
     githubUrl: "#",
     liveUrl: "#",
-    image: imageBeta // <-- Tambahkan ini
+    image: imageBeta
   },
   {
     title: "Air Traffic Control System (ATCS)",
@@ -32,7 +30,7 @@ const projectData = [
     tags: ["PHP", "Laravel", "Node.js", "MySQL"],
     githubUrl: "#",
     liveUrl: "#",
-    image: imageGamma // <-- Tambahkan ini
+    image: imageGamma 
   }
 ];
 
@@ -60,7 +58,6 @@ const Projects = () => {
           >
             <div className="project-card-border"></div>
             <div className="project-content">
-              {/* 3. Ganti placeholder dengan div yang menggunakan gambar sebagai background */}
               <div 
                 className="project-image" 
                 style={{ backgroundImage: `url(${project.image})` }}

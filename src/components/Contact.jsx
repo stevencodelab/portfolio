@@ -13,7 +13,7 @@ const Contact = () => {
       transition={{ duration: 1 }}
     >
       <div className="contact-content">
-        <h4 className="contact-pretitle">04. Apa Selanjutnya?</h4>
+        <h4 className="contact-pretitle">05. Apa Selanjutnya?</h4>
         <h2 className="contact-title">Mari Terhubung</h2>
         <p className="contact-description">
           Saat ini saya sedang mencari kesempatan baru. Jika Anda memiliki pertanyaan atau hanya ingin menyapa, pintu saya selalu terbuka.
