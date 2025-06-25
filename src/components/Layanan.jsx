@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll'; // Untuk tombol CTA
-import { FaCogs, FaBullseye, FaBuilding, FaGlobe } from 'react-icons/fa'; // Ikon untuk setiap layanan
+// 1. Hapus import 'Link' dari react-scroll karena sudah tidak digunakan di sini
+// import { Link } from 'react-scroll'; 
+import { FaCogs, FaBullseye, FaBuilding, FaGlobe } from 'react-icons/fa';
 import './Layanan.css';
 
 const services = [
@@ -28,6 +29,9 @@ const services = [
 ];
 
 const Layanan = () => {
+  // Membuat link WhatsApp agar lebih mudah dibaca dan di-manage
+  const whatsappUrl = "https://wa.me/6282329087585?text=Hallo%20Kak,%20apa%20betul%20ini%20dengan%20Steven%20Morison%20%3F";
+
   return (
     <motion.section
       id="layanan"
@@ -57,9 +61,15 @@ const Layanan = () => {
         ))}
       </div>
       <div className="layanan-cta">
-        <Link to="contact" smooth={true} duration={500} className="cta-button">
-          Diskusikan Proyek Anda
-        </Link>
+        {/* 2. Ganti komponen <Link> menjadi tag <a> biasa */}
+        <a 
+          href={whatsappUrl} 
+          className="cta-button" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Diskusikan via WhatsApp
+        </a>
       </div>
     </motion.section>
   );
