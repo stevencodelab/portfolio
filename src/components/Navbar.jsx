@@ -95,7 +95,7 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="navbar-logo">
-          <Link to="hero" smooth={true} duration={500}>// YP</Link>
+          <Link to="hero" smooth={true} duration={500}>// Laksamana Steven Morison</Link>
         </div>
         {!isMobile && (
           <ul className="navbar-links">
