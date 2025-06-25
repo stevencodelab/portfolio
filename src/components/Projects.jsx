@@ -3,12 +3,37 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './Projects.css';
 
-const projectData = [
-  // Ganti dengan data proyek Anda
-  { title: "Air Traffic Control System", description: "Platform monitoring cctv secara real-time dengan admin dashboard, dibangun dengan Laravel stack.", tags: ["PHP", "Node.js", "MySQL", "Laravel 12"], githubUrl: "#", liveUrl: "#" },
-  { title: "Sistem Perpustakaan Dengan QR Code", description: "Web App Perpustakaan modern dengan sistem transaksi terintegrasi qr code dan panel admin.", tags: ["PHP", "Node.js", "MySQL","CodeIgniter"], githubUrl: "#", liveUrl: "#" },
-  { title: "Sistem Absensi Dengan QR Code", description: "Web App Absensi Guru dan Murid modern dengan sistem terintegrasi qr code untuk analisis data absensi.", tags: ["PHP", "MySQL", "Laravel"], githubUrl: "#", liveUrl: "#" },
+// 1. Impor gambar untuk setiap proyek dari folder assets
+import imageAlpha from '../assets/hero.png';
+import imageBeta from '../assets/home.png';
+import imageGamma from '../assets/cctv.png';
 
+// 2. Tambahkan properti 'image' ke setiap objek proyek
+const projectData = [
+  {
+    title: "Sistem Absensi Dengan QR Code",
+    description: "Web App Absensi Guru dan Murid modern dengan sistem terintegrasi qr code untuk analisis data absensi.",
+    tags: ["PHP", "Node.js", "MySQL", "CodeIgniter"],
+    githubUrl: "#",
+    liveUrl: "#",
+    image: imageAlpha // <-- Tambahkan ini
+  },
+  {
+    title: "Sistem Perpustakaan Dengan QR Code",
+    description: "Web App Perpustakaan modern dengan sistem transaksi terintegrasi qr code dan panel admin.",
+    tags: ["PHP", "CodeIgniter", "MySQL"],
+    githubUrl: "#",
+    liveUrl: "#",
+    image: imageBeta // <-- Tambahkan ini
+  },
+  {
+    title: "Air Traffic Control System (ATCS)",
+    description: "Platform monitoring cctv secara real-time dengan admin dashboard, dibangun dengan Laravel stack.",
+    tags: ["PHP", "Laravel", "Node.js", "MySQL"],
+    githubUrl: "#",
+    liveUrl: "#",
+    image: imageGamma // <-- Tambahkan ini
+  }
 ];
 
 const Projects = () => {
@@ -35,8 +60,12 @@ const Projects = () => {
           >
             <div className="project-card-border"></div>
             <div className="project-content">
-              {/* Ganti div ini dengan gambar/gif proyek Anda */}
-              <div className="project-image-placeholder"></div>
+              {/* 3. Ganti placeholder dengan div yang menggunakan gambar sebagai background */}
+              <div 
+                className="project-image" 
+                style={{ backgroundImage: `url(${project.image})` }}
+              ></div>
+
               <div className="project-info">
                 <div className="project-header">
                   <h3 className="project-title">{project.title}</h3>
