@@ -30,7 +30,7 @@ const services = [
 
 const Layanan = () => {
   // Membuat link WhatsApp agar lebih mudah dibaca dan di-manage
-  const whatsappUrl = "https://wa.me/6282329087585?text=Hallo%20Kak,%20apa%20betul%20ini%20dengan%20Steven%20Morison%20%3F";
+  const whatsappUrl = "https://wa.me/6282324093711?text=Hallo%20Kak,%20apa%20betul%20ini%20dengan%20Steven%20Morison%20%3F";
 
   return (
     <motion.section
