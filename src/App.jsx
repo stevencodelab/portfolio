@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Layanan from './components/Layanan';
+import Ratings from './components/Ratings';
 import Contact from './components/Contact';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
-        <Layanan/>
+        <Ratings />
         <Contact />
       </main>
     </div>
