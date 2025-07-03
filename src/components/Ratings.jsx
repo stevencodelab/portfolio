@@ -1,8 +1,8 @@
 // src/components/Ratings.jsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { supabase } from '../supabaseClient'; 
-import './Ratings.css'; 
+import { supabase } from '../supabaseClient';
+import './Ratings.css';
 
 const Ratings = () => {
   const [ratings, setRatings] = useState([]);
@@ -12,12 +12,11 @@ const Ratings = () => {
     const fetchRatings = async () => {
       setLoading(true);
       try {
-
         const { data, error } = await supabase
           .from('ratings')
           .select('*')
           .order('created_at', { ascending: false })
-          .limit(6); 
+          .limit(6);
 
         if (error) throw error;
         
@@ -51,12 +50,17 @@ const Ratings = () => {
             transition={{ duration: 0.5, delay: index * 0.15 }}
           >
             <div className="rating-content">
+              {/* TAMPILKAN NAMA PROYEK */}
+              <div className="rating-project">
+                Untuk: <span>{item.project_name || 'Sebuah Proyek'}</span>
+              </div>
+              
               <div className="rating-stars">{createStarRating(item.rating)}</div>
               <p className="rating-comment">"{item.comment || 'Tidak ada komentar.'}"</p>
-              <span className="rating-date">
-                {new Date(item.created_at).toLocaleDateString('id-ID', {
-                  day: 'numeric', month: 'long', year: 'numeric'
-                })}
+              
+              {/* TAMPILKAN NAMA PEMBERI RATING */}
+              <span className="rating-author">
+                - {item.name || 'Anonim'}
               </span>
             </div>
           </motion.div>
