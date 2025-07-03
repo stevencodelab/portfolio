@@ -1,14 +1,5 @@
-/* src/components/Ratings.css */
 #ratings {
-  /* Atur padding atau margin sesuai kebutuhan layout Anda */
   margin-top: 4rem; 
-}
-
-#ratings h2 {
-  /* Samakan dengan style h2 di Projects.css jika perlu */
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: var(--white-smoke);
 }
 
 .ratings-grid {
@@ -18,7 +9,7 @@
 }
 
 .rating-card {
-  background: var(--onyx); /* Samakan dengan project-card */
+  background: var(--onyx);
   border: 1px solid #30363d;
   border-radius: 8px;
   padding: 1.5rem;
@@ -30,7 +21,7 @@
 
 .rating-stars {
   font-size: 1.5rem;
-  color: var(--gold); /* Gunakan variabel warna gold Anda */
+  color: var(--gold); 
   margin-bottom: 1rem;
 }
 
@@ -38,7 +29,7 @@
   color: var(--grey);
   font-style: italic;
   margin-bottom: 1.5rem;
-  flex-grow: 1; /* Agar komentar mengisi ruang */
+  flex-grow: 1;
 }
 
 .rating-date {
