@@ -3,11 +3,45 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './Projects.css';
 
+// 1. Impor gambar untuk setiap proyek dari folder assets
+import imageAlpha from '../assets/hero.png';
+import imageBeta from '../assets/home.png';
+import imageGamma from '../assets/cctv.png';
+import imageDelta from '../assets/budget.jpg'; 
+
 const projectData = [
-  // Ganti dengan data proyek Anda
-  { title: "Project Alpha", description: "Platform manajemen tugas dengan fitur kolaborasi real-time, dibangun dengan MERN stack.", tags: ["React", "Node.js", "MongoDB"], githubUrl: "#", liveUrl: "#" },
-  { title: "Project Beta", description: "Aplikasi e-commerce modern dengan sistem pembayaran terintegrasi dan panel admin.", tags: ["Next.js", "TypeScript", "PostgreSQL"], githubUrl: "#", liveUrl: "#" },
-  { title: "Project Gamma", description: "API service untuk analisis data cuaca historis menggunakan Python (Flask) dan Docker.", tags: ["Python", "Flask", "Docker"], githubUrl: "#", liveUrl: "#" },
+  {
+    title: "Sistem Absensi Dengan QR Code",
+    description: "Web App Absensi Guru dan Murid modern dengan sistem terintegrasi qr code untuk analisis data absensi.",
+    tags: ["PHP", "Node.js", "MySQL", "QR Code", "Bootstrap","CodeIgniter"],
+    githubUrl: "#",
+    liveUrl: "#",
+    image: imageAlpha 
+  },
+  {
+    title: "Sistem Perpustakaan Dengan QR Code",
+    description: "Web App Perpustakaan modern dengan sistem transaksi terintegrasi qr code dan panel admin.",
+    tags: ["PHP", "Node.js", "MySQL", "QR Code", "Bootstrap","CodeIgniter"],
+    githubUrl: "#",
+    liveUrl: "#",
+    image: imageBeta 
+  },
+  {
+    title: "Air Traffic Control System (ATCS)",
+    description: "Platform monitoring cctv secara real-time dengan admin dashboard, dibangun dengan Laravel stack.",
+    tags: ["PHP", "Laravel", "MySQL", "Bootstrap", "Node.js"],
+    githubUrl: "#",
+    liveUrl: "#",
+    image: imageGamma
+  },
+  {
+    title: "Website Budgeting Management",
+    description: "Website pengelolaan pemasukkan dan pengeluaran berdasarkan alokasi budget melalui dashboard admin.",
+    tags: ["HTML", "CSS", "Javascript", "Bootstrap", "Node.js"],
+    githubUrl: "#",
+    liveUrl: "https://mybudgetdashboard.netlify.app/",
+    image: imageDelta
+  }
 ];
 
 const Projects = () => {
@@ -34,8 +68,12 @@ const Projects = () => {
           >
             <div className="project-card-border"></div>
             <div className="project-content">
-              {/* Ganti div ini dengan gambar/gif proyek Anda */}
-              <div className="project-image-placeholder"></div>
+              {/* 3. Ganti placeholder dengan div yang menggunakan gambar sebagai background */}
+              <div 
+                className="project-image" 
+                style={{ backgroundImage: `url(${project.image})` }}
+              ></div>
+
               <div className="project-info">
                 <div className="project-header">
                   <h3 className="project-title">{project.title}</h3>
