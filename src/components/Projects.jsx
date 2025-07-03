@@ -3,35 +3,11 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './Projects.css';
 
-import imageAlpha from '../assets/hero.png';
-import imageBeta from '../assets/home.png';
-import imageGamma from '../assets/cctv.png';
-
 const projectData = [
-  {
-    title: "Sistem Absensi Dengan QR Code",
-    description: "Web App Absensi Guru dan Murid modern dengan sistem terintegrasi qr code untuk analisis data absensi.",
-    tags: ["PHP", "Node.js", "MySQL", "CodeIgniter"],
-    githubUrl: "#",
-    liveUrl: "#",
-    image: imageAlpha 
-  },
-  {
-    title: "Sistem Perpustakaan Dengan QR Code",
-    description: "Web App Perpustakaan modern dengan sistem transaksi terintegrasi qr code dan panel admin.",
-    tags: ["PHP", "CodeIgniter", "MySQL"],
-    githubUrl: "#",
-    liveUrl: "#",
-    image: imageBeta
-  },
-  {
-    title: "Air Traffic Control System (ATCS)",
-    description: "Platform monitoring cctv secara real-time dengan admin dashboard, dibangun dengan Laravel stack.",
-    tags: ["PHP", "Laravel", "Node.js", "MySQL"],
-    githubUrl: "#",
-    liveUrl: "#",
-    image: imageGamma 
-  }
+  // Ganti dengan data proyek Anda
+  { title: "Project Alpha", description: "Platform manajemen tugas dengan fitur kolaborasi real-time, dibangun dengan MERN stack.", tags: ["React", "Node.js", "MongoDB"], githubUrl: "#", liveUrl: "#" },
+  { title: "Project Beta", description: "Aplikasi e-commerce modern dengan sistem pembayaran terintegrasi dan panel admin.", tags: ["Next.js", "TypeScript", "PostgreSQL"], githubUrl: "#", liveUrl: "#" },
+  { title: "Project Gamma", description: "API service untuk analisis data cuaca historis menggunakan Python (Flask) dan Docker.", tags: ["Python", "Flask", "Docker"], githubUrl: "#", liveUrl: "#" },
 ];
 
 const Projects = () => {
@@ -58,11 +34,8 @@ const Projects = () => {
           >
             <div className="project-card-border"></div>
             <div className="project-content">
-              <div 
-                className="project-image" 
-                style={{ backgroundImage: `url(${project.image})` }}
-              ></div>
-
+              {/* Ganti div ini dengan gambar/gif proyek Anda */}
+              <div className="project-image-placeholder"></div>
               <div className="project-info">
                 <div className="project-header">
                   <h3 className="project-title">{project.title}</h3>
